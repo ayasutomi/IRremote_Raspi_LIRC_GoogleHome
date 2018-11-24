@@ -1,8 +1,8 @@
 # IR remote with Raspberry pi and Google Home
 
-# Install LIRD
+## Install LIRD
 
-# Test IR LED
+## Test IR LED
 
     $ cd /etc/lirc/lircd.conf.d/
     $ sudo wget -O test.conf https://sourceforge.net/p/lirc-remotes/code/ci/master/tree/remotes/samsung/00056A.lircd.conf?format=raw
@@ -12,7 +12,7 @@
 
     $ irsend SEND_ONCE Samsung_00056A KEY_POWER
 
-# TEST Receiver
+## TEST Receiver
 
     $ sudo mode2 -d /dev/lirc0
 Then press a TV remote control. It will print the date as below)
@@ -25,7 +25,7 @@ Then press a TV remote control. It will print the date as below)
     space 584
     pulse 93412
 
-# Record TV Remote Control
+## Record TV Remote Control
 
 Return to root
 
@@ -45,7 +45,7 @@ Copy file to '/etc/lirc/lircd.conf.d/'.
 
     $ sudo cp Sharp_GB077WJSA.lircd.conf /etc/lirc/lircd.conf.d/
 
-# Record Air Conditioner Remote Control
+## Record Air Conditioner Remote Control
 
 Air conditioner remote controls do not send signals related to just one button as on TV remotes.
 Instead, it send a signal with the whole air conditioner configuration including temperature, airflow, air direction, etc.
@@ -110,15 +110,15 @@ The signals obtained will be in the following form:
         582      500      527      555      526      556
         526
 
-# Create node.js server
+## Create node.js server
 
 
 
-# Link Google Home to Raspberry Pi using Webhooks
+## Link Google Home to Raspberry Pi using Webhooks
 
 
 
-# Open port to internet (Port Forwading)
+## Open port to internet (Port Forwading)
 
 Forward a port from the internet to your home network. 
 
@@ -127,7 +127,7 @@ This has to be done in your router configuration normally accessed by typing the
 The ip address used in the port forward is the local ip address of the raspi, and the port is 3003 (as configured in the .js file of the server)
 
 
-# References:
+## References:
 https://craftzdog.hateblo.jp/entry/control-an-air-conditioner-with-voice-from-google-home-via-raspberry-pi
 
 https://portforward.com/buffalo/whr-g300n/
