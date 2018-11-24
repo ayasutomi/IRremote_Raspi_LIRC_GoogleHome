@@ -15,7 +15,8 @@
 ## TEST Receiver
 
     $ sudo mode2 -d /dev/lirc0
-Then press a TV remote control. It will print the date as below)
+Then press a TV remote control. It will print the date as below:
+
     space 8979
     pulse 4451
     space 588
