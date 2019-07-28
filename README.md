@@ -76,12 +76,12 @@ To record the A/C IR signal then, the steps shown in https://craftzdog.hateblo.j
 Since the website is in Japanese, the steps are summarized below:
 
 1. Type the following command to stop the LIRC systemd service and read the IR signals sent.
-
+```
     $ sudo systemctl stop lircd
     $ mode2 -m -d /dev/lirc0
-
+```
 2. Press the ON and OFF button of the A/C remote. Two signals similar to the following will be obtained:
-
+```
     4989552
 
         4369     4418      525     1640      579     1587
@@ -134,7 +134,7 @@ Since the website is in Japanese, the steps are summarized below:
         583      500      526      555      526      556
         582      500      527      555      526      556
         526
-
+```
 3. Create a file called `aircon.lircd.conf` in `/etc/lirc/lircd.conf.d/` and add the IR signals obtained when pressed the button ON and OFF of the A/C remote after `name on` and `name off` respectively. The first number of the signal series should be left off since it is the time the system waited for the next command.
 
     ```javascript
